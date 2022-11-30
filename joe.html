@@ -1,0 +1,190 @@
+@props([
+    'drop_down',
+    'primary_logo',
+    'secondary_logo',
+    'menu_0',
+    'menu_1',
+])
+
+<div>
+    <nav id="navbar" class="navbar nav-transparent navbar-expand-lg bg-light py-2">
+        <div class="container-fluid pad-body">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+            @if(isset($primary_logo))
+                <img src="{{ $primary_logo }}" alt="{{ $primary_logo }}" class="default"/>
+            @endif
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="header-search">
+                <div class="search-form">
+                    <div class="search-form-field">
+                        <button type="submit" class="search-form-button">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        </button>
+
+                        <div class="input-group flex-nowrap">
+                        <input 
+                            type="text" id="search" 
+                            class="form-control search-form-input" 
+                            placeholder="Search" aria-label="Username" 
+                            aria-describedby="addon-wrapping"
+                            autocomplete="off"
+                        >
+                        </div>
+                        @if (isset($drop_down))
+                        <div class="dropdown">
+                        <i class="bi bi-chevron-down"></i>
+                            <a
+                                class="btn-custom btn-primarys dropdown-toggle button-nav"
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                                {{ $drop_down }}
+                            </a>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                @foreach ($drop_down as $drop_item)
+                                <li><a class="dropdown-item" href="#">{{$drop_item}}</a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="navbar-brand" href="#">
+                @if(isset($secondary_logo))
+                    <img src="{{asset('storage/images/thumbnail/1669793958.png') }}" alt="{{ $configweb->title }}" class="default"/>
+                @endif
+                </a>
+                </li>
+                @if(isset($menu))
+                <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link ">Contact Us</a>
+                </li>
+                @endif
+            </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+const navbar = document.querySelector('.nav-fixed');
+window.onscroll = () => {
+    if (window.scrollY > 300) {
+        navbar.classList.add('nav-active');
+    } else {
+        navbar.classList.remove('nav-active');
+    }
+};
+</script>
+<style>
+    .btn-custom{
+        color: white;
+        display: flex;
+        align-items: center;
+        box-shadow:none;
+        background:transparent;
+    }
+    
+    .button-nav:focus, .button-nav:hover, 
+    .button-nav:active, .button-nav:target,
+    .btn-custom:hover, .btn-custom:active {
+        background:transparent;
+        color:white;
+    }
+
+    .dropdown-toggle:after{
+        content:unset;
+    }
+    .dropdown-toggle{
+        display: flex;
+        flex-direction: row-reverse;
+        background: transparent;
+        box-shadow: none;
+        gap: 2.2rem;
+        padding: 0;
+    }
+
+    .header-search{
+        position: relative;
+        flex: 1;
+        margin-left: 12px;
+        z-index: 3;
+    }
+    input.search-form-input:focus {
+        box-shadow: unset !important;
+        border : none !important;
+        background: transparent;
+        color:var(--j-color-secondary);
+    }
+    .navbar-brand{
+        margin : 0;
+        padding: 0;
+    }
+    .navbar-brand img{
+        width:100px;
+    }
+    .nav-colored{
+        background: black !important;
+    }
+    .nav-transparent{
+        box-shadow: none;
+        background-color: transparent !important;
+    }
+    
+    .search-form-field{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 48px;
+        padding-right: 20px;
+        background: var(--j-color-primary);
+        border-radius: var(--rounded-normal);
+        font-size: 14px;
+        z-index: 1;
+    }
+    .search-form-button{
+        display: flex;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-left: 20px;
+        color:var(--j-color-secondary);   
+    }
+    .search-form-button svg{
+        width: 20px;
+        height: 20px;
+    }
+    .search-form-input{
+        position: relative;
+        flex: 1;
+        height: 100%;
+        background: transparent;
+        border: none;
+        padding-left: 10px;
+        font-size: var(--text-header);
+        color:var(--j-color-secondary);
+    }
+    .search-form-input::-webkit-input-placeholder, .search-form-input::-webkit-input-value{
+        color:var(--j-color-secondary);
+    }
+</style>
