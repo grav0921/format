@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	  rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	  rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+	  rel="stylesheet"
+	/>
+	<title>Joe Panel</title>
+	<script
+	  type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"
+	></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<title>Header</title>
+</head>
+<body>
+	<header>
+	<nav id="navbar" class="navbar nav-transparent navbar-expand-lg bg-light py-2">
+        <div class="container-fluid pad-body">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+            	<img src="logo/logo-joegreen.png" alt="logo/logo-joegreen.png" class="default"/>
+           <!--  @if(isset($primary_logo))
+                <img src="{{ $primary_logo }}" alt="{{ $primary_logo }}" class="default"/>
+            @endif -->
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="header-search">
+                <div class="bg-overlay" id="headerBlack"></div>
+                <div class="search-form">
+                    <div class="search-form-field">
+                        <button type="submit" class="search-form-button">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                        </button>
+
+                        <div class="input-group flex-nowrap">
+                        <input onclick="searchClick()"
+                            type="text" id="search" 
+                            class="form-control search-form-input" 
+                            placeholder="Search" aria-label="Username" 
+                            aria-describedby="addon-wrapping"
+                            autocomplete="off"
+                        >
+                        </div>
+
+                       
+                        <!-- @if (isset($drop_down)) -->
+                        <div class="dropdown">
+                        <i class="bi bi-chevron-down"></i>
+                            <a
+                                class="btn-custom btn-primarys dropdown-toggle button-nav"
+                                href="#"
+                                role="button"
+                                id="dropdownMenuLink"
+                                data-mdb-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                            	Dropdown
+                                <!-- {{ $drop_down }} -->
+                            </a>
+                            
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            	<li><a class="dropdown-item" href="#">Menu 1</a></li>
+                            	<li><a class="dropdown-item" href="#">Menu 2</a></li>
+                            	<li><a class="dropdown-item" href="#">Menu 3</a></li>
+                               <!--  @foreach ($drop_down as $drop_item)
+                                <li><a class="dropdown-item" href="#">{{$drop_item}}</a></li>
+                                @endforeach -->
+                            </ul>
+                        </div>
+                        <!-- @endif -->
+                    </div>
+                    <div class="header-result header-fade" id="headerResult">
+                        <h3>oasdkopasj</h3>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="navbar-brand" href="#">
+                	<img src="logo/image-75.png" alt="logo/image-2.png" class="default"/>
+               <!--  @if(isset($secondary_logo))
+                    <img src="{{asset('storage/images/thumbnail/1669793958.png') }}" alt="{{ $configweb->title }}" class="default"/>
+                @endif -->
+                </a>
+                </li>
+                <!-- @if(isset($menu)) -->
+                <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link ">Contact Us</a>
+                </li>
+                <!-- @endif -->
+            </ul>
+            </div>
+        </div>
+
+    </nav>
+    </header>
+</body>
+</html>
+<style>
+    .bg-overlay{
+        background: black;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        /*transition: all .3s;*/
+        /*-webkit-transition-duration: 0.8s;*/
+    }
+    .bg-overlay-show{
+        opacity: 0.2;
+        visibility: visible;
+        /*transition: all .3s;*/
+    }
+    .btn-custom{
+        color: white;
+        display: flex;
+        align-items: center;
+        box-shadow:none;
+        background:transparent;
+    }
+    
+    .button-nav:focus, .button-nav:hover, 
+    .button-nav:active, .button-nav:target,
+    .btn-custom:hover, .btn-custom:active {
+        background:transparent;
+        color:white;
+    }
+    .card-pro{
+    	spadding: 0;
+    }
+    .card-product-category{
+    	margin: 0 !important;
+    }
+    .carousel-item img{
+    	transform: translate(0px, -65px);
+    }
+    .carousel-inner{
+    	object-fit: cover;
+	    width: 100%;
+	    height: 350px;
+	    overflow: hidden;
+    }
+    .description{
+    	text-align: center;
+    }
+    .description p{
+    	width: 50%;
+    	margin: auto;
+    }
+    .dropdown-toggle:after{
+        content:unset;
+    }
+    .dropdown-toggle{
+        display: flex;
+        flex-direction: row-reverse;
+        background: transparent;
+        box-shadow: none;
+        gap: 2.2rem;
+        padding: 0;
+    }
+    header{
+    	width: 100%;
+    	position: absolute;
+    }
+
+    .header-search{
+        position: relative;
+        flex: 1;
+        margin-left: 12px;
+        z-index: 3;
+    }
+    .form-control{
+         -webkit-transition-duration: 0.8s;
+    }
+    .header-fade{
+            transition: opacity .15s linear;
+    }
+    .header-result{
+        color: white;
+        position: absolute;
+        background: #2c4c2f;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        padding: 100px 20px 50px;;
+        border-radius: var(--rounded-normal);
+        opacity: 0;
+        /*transition: all .2s;*/
+        visibility: hidden;
+    }
+    .header-result-show{
+        visibility: visible;
+        opacity: 1;
+    }
+    #home{
+    	background-color:var(--j-color-secondary) 
+    }
+    input.search-form-input:focus {
+        box-shadow: unset !important;
+        border : none !important;
+        background: transparent;
+        color:var(--j-color-secondary);
+    }
+    .navbar-brand{
+        margin : 0;
+        padding: 0;
+    }
+    .navbar-brand img{
+        width:100px;
+    }
+    .nav-colored{
+        background: black !important;
+    }
+    .nav-transparent{
+        box-shadow: none;
+        background-color: transparent !important;
+    }
+    
+    .search-form-field{
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 48px;
+        padding-right: 20px;
+        background: var(--j-color-primary);
+        border-radius: var(--rounded-normal);
+        font-size: 14px;
+        z-index: 3;
+    }
+    .search-form-button{
+        display: flex;
+        padding: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding-left: 20px;
+        color:var(--j-color-secondary);   
+    }
+    .search-form-button svg{
+        width: 20px;
+        height: 20px;
+    }
+    .search-form-input{
+        position: relative;
+        flex: 1;
+        height: 100%;
+        background: transparent;
+        border: none;
+        padding-left: 10px;
+        font-size: var(--text-header);
+        color:var(--j-color-secondary);
+    }
+    .search-form-input::-webkit-input-placeholder, .search-form-input::-webkit-input-value{
+        color:var(--j-color-secondary);
+    }
+    section{
+    	padding: 120px 0;
+    }
+
+
+    .j-px-sm{
+    	padding: 0 var(--px-sm);
+    }
+   	*{
+    font-family:'Montserrat';
+	}
+
+	:root {
+	--px-sm :54px;
+    --j-color-primary : #3D9746;
+    --j-color-secondary : #EEFFEE;
+    --color-primary: #222;
+    --color-primary-rgb: 34, 34, 34;
+    --color-link: #222;
+    --color-white: #fff;
+    --color-white-rgb: 255, 255, 255;
+    --color-orange: #FA5D29;
+    --color-errors: #FA5D29;
+    --color-featured: #f8f0ee;
+    --color-underlined: var(--color-primary-rgb);
+    --color-connect: #FF602C;
+    --color-connect-2: #FFAE94;
+    --color-connect-3: #FFC5B1;
+    --color-inspire: #AAEEC4;
+    --color-inspire-2: #C8E4D3;
+    --color-inspire-3: #E2F4E9;
+    --color-awards: #502bd8;
+    --color-awards-2: #6749d1;
+    --color-awards-3: #917eda;
+    --color-read: #c0ab3c;
+    --color-read-2: #CDC38B;
+    --color-read-3: #DBD6C0;
+    --color-learn: #FFF083;
+    --color-learn-2: #FFF9D0;
+    --color-learn-3: #fffbe2;
+    --color-jobs: #74bcff;
+    --color-jobs-2: #99ccfc;
+    --color-jobs-3: #b4d7f8;
+    --text-size-small: 12px;
+    --text-size-primary: 16px;
+    --text-size-medium: 18px;
+    --text-size-large: 24px;
+    --border-gray: #e9e9e9;
+    --bg-primary: #F8F8F8;
+    --bg-primary-rgb: 248, 248, 248;
+    --bg-secondary: #222;
+    --bg-3rd: #e9e9e9;
+    --bg-4rd: #f3f3f3;
+    --bg-white: white;
+    --header-height: 71px;
+    --gutter: 20px;
+    --pad-inner: 52px;
+    --color-odd-rows: #f3f3f3;
+    --avatar-bg: #F8F8F8;
+    --rounded-small: 4px;
+    --rounded-normal: 8px;
+    --rounded-large: 1rem;
+    --img-resizing-site: 16 / 12;
+    --img-resizing-paronamic: 2 / 1;
+    --img-resizing-desktop: 19 / 10;
+}
+</style>
+
+<script>
+	function clicks() {
+    	var color = document.getElementById("search2");
+        if (color.style.color === "blue"){
+        	color.style.color = "red";
+		}else{
+			color.style.color = "blue";
+        	}
+        }
+        const classes = ["bg-overlay-show","header-result-show","bg-overlay-show"];
+
+        function searchClick() {
+        var show = document.getElementById("headerResult");
+        var background = document.getElementById("headerBlack");
+        // const opacity = document.createElement("div");
+        // opacity.setAttribute("id","aid")
+        // if(show.style.visibility === "visible" || show.style.opacity === "0"){
+        //     show.style = "visibility:hidden; opacity:1";
+
+        // }else{
+        //     show.style = "visibility:visible; opacity:1";
+        // }
+        // for (var i = 0; i<classes.length; i++){
+        //     show.classList.toggle(classes[i]);
+        // }
+        	show.classList.toggle("header-result-show");
+        	background.classList.toggle("bg-overlay-show")
+
+        }
+        	var headBlack = document.getElementById("headerBlack");
+        	headBlack.addEventListener("click", displayDate);
+        function displayDate(){
+        	var show = document.getElementById("headerResult");
+        	var background = document.getElementById("headerBlack");
+        	show.classList.toggle("header-result-show");
+        	background.classList.toggle("bg-overlay-show")
+        }
+</script>
