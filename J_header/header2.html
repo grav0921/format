@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="INSPIRO" />
+    <meta name="description" content="Themeforest Template Polo, html template">
+    <link rel="icon" type="image/png" href="images/favicon.png">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>POLO | The Multi-Purpose HTML5 Template</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+	<title>Joe Panel</title>
+	
+
+	
+	<title>Header</title>
+</head>
+<div class="body-inner" style="background: var(--j-color-secondary); min-height: 450vh">
+
+        <!-- Header -->
+        <header id="header" data-transparent="true" data-fullwidth="true" class="dark submenu-light" style="position: absolute;">
+            <div class="header-inner inner">
+                <div class="bg-overlay bg-show" id="headerBlack"></div>
+                <div class="container">
+                    <div class="header-search">
+                        <a href="#">
+                            <div class="brand me-2">
+                                <img src="logo/logo-joegreen.png" alt="logo/logo-joegreen.png" class="default"/>
+                            </div>
+                        </a>
+                        <div class="search-form" id="searchForm">
+                            <div class="search-form-field">
+                                <button type="submit" class="search-form-button">
+                                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                                </button>
+
+                                <div class="input-group flex-nowrap">
+                                <input onclick="searchClicked()"
+                                    type="text" id="search2" 
+                                    class="form-control search-form-input" 
+                                    placeholder="Search" aria-label="Username" 
+                                    aria-describedby="addon-wrapping"
+                                    autocomplete="off"
+                                >
+                                </div>
+                                <!-- @if (isset($drop_down)) -->
+                                <div onclick="dropLanguage()" class="language drop-content">
+                                        
+                                </div>
+                                <div class="drop-content hidden-sm">
+                                    <div class="p-dropdown">
+                                    <a href="#">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-globe" viewBox="0 0 16 16">
+                                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                                        </svg>
+                                        <span class="hidden-lg">Language</span>
+                                    </a>
+                                    <ul class="p-dropdown-content">
+                                        <li><a href="#">English</a></li>
+                                        <li><a href="#">Indonesian</a></li>
+                                        <li><a href="#">Chinese</a></li>
+                                    </ul>
+                                    </div>
+
+                                    <div class="dropdown-toggle" onclick="dropToggle()">
+
+                                    <svg class="dropspan" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+
+                                    <span class="dropspan hidden-lg">
+                                        More item
+                                    </span>
+
+                                    <div id="myDropdown" class="hide dropdown-content">
+                                        <a href="#home">Product</a>
+                                        <a href="#about">Project</a>
+                                        <a href="#contact">Articles</a>
+                                    </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="header-result header-fade" id="headerResult">
+                                    <div class="header-result-content">
+                                        <div class="header-content-left">
+
+                                            <div class="header-content-project">
+                                                <div class="header-project hidden-sm">
+                                                    <p>checkout our projects</p>
+                                                    <ul class="list-project">
+                                                        <li>
+                                                        <figure>
+                                                            <a href=""><img class="img-fluid" src="logo/img.jpg"></a>
+                                                        </figure>
+                                                            <a href="#"><p>Figure 1</p></a>
+                                                        </li>
+                                                        <li>
+                                                        <figure>
+                                                           <a href=""><img class="img-fluid" src="logo/img.jpg"></a>
+                                                        </figure>
+                                                           <a href="#"><p>Figure 2</p></a>
+                                                        </li>
+                                                        <li>
+                                                        <figure>
+                                                            <a href=""><img class="img-fluid" src="logo/img.jpg"></a>
+                                                        </figure>
+                                                            <a href="#"><p>Figure 3</p></a>
+                                                        </li>
+                                                        <li>
+                                                        <figure>
+                                                           <a href=""><img class="img-fluid" src="logo/img.jpg"></a>
+                                                        </figure>
+                                                           <a href="#"><p>Figure 4</p></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="header-tags">
+                                                  <p>Tags</p>
+                                                  <ul class="list-project">
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                  </ul>
+                                                </div>
+
+                                                <div class="header-tags show-sm">
+                                                  <p>Main menu</p>
+                                                  <ul class="list-project">
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                    <li><a href=""><p  class="button-rounded-large">Products<p></a></li>
+                                                  </ul>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="header-content-right">
+                                            <h3><p>Articles</p></h3>
+                                            <div class="carousel flickity-enabled is-draggable carousel-loaded" data-items="2" data-dots="false">   
+
+                                                <div class="polo-carousel-item">
+                                                    <a href="#">
+                                                        <div class="brand">
+                                                            <figure>
+                                                                <img src="logo/img.jpg" class="">
+                                                            </figure>
+                                                            <div class="product">
+                                                                <div class="product-description">
+                                                                    <h3><p>CSS object-fit More Examples</p></h3>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="polo-carousel-item">
+                                                    <a href="#">
+                                                        <div class="brand">
+                                                            <figure>
+                                                                <img src="logo/img.jpg" class="">
+                                                            </figure>
+                                                            <div class="product">
+                                                                <div class="product-description">
+                                                                    <h3><p>HTML DOM Document querySelector()</p></h3>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="brand ms-2">
+                                <img src="logo/image 75.png" alt="logo/logo-joegreen.png" class="default"/>
+                            </div>
+                        </a>
+                        <div class="hidden-md">
+                        <div class="ekstras">
+                                <li><a href="">About</a></li>
+                                <li><a href="">Contact</a></li>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- section  -->
+        <section id="welcome">
+            <div class="inner">
+                <div class="pad-inner">
+                    <h1 class="display-1">Locow</h1>
+                    <div class="marquee">
+                        <div>
+                            <h5>WELCOME TO THE WORLD OF POLO</h5>
+                            <h5>WELCOME TO THE WORLD OF POLO</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>
+<style>
+    .bg-overlay{
+        background: black;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        /*transition: all .3s;*/
+        /*-webkit-transition-duration: 0.8s;*/
+    }
+    .bg-overlay-show{
+        opacity: 0.2;
+        visibility: visible;
+        /*transition: all .3s;*/
+    }
+    .btn-custom{
+        color: white;
+        display: flex;
+        align-items: center;
+        box-shadow:none;
+        background:transparent;
+    }
+    
+    .button-nav:focus, .button-nav:hover, 
+    .button-nav:active, .button-nav:target,
+    .btn-custom:hover, .btn-custom:active {
+        background:transparent;
+        color:white;
+    }
+    .card-pro{
+    	spadding: 0;
+    }
+    .card-product-category{
+    	margin: 0 !important;
+    }
+    .carousel-item img{
+    	transform: translate(0px, -65px);
+    }
+    .carousel-inner{
+    	object-fit: cover;
+	    width: 100%;
+	    height: 350px;
+	    overflow: hidden;
+    }
+    .description{
+    	text-align: center;
+    }
+    .description p{
+    	width: 50%;
+    	margin: auto;
+    }
+    .form-control{
+         -webkit-transition-duration: 0.8s;
+    }
+    
+    #home{
+    	background-color:var(--j-color-secondary) 
+    }
+    input.search-form-input:focus {
+        box-shadow: unset !important;
+        border : none !important;
+        background: transparent;
+        color:var(--j-color-secondary);
+    }
+    .navbar-brand{
+        margin : 0;
+        padding: 0;
+    }
+    .navbar-brand img{
+        width:100px;
+    }
+    .nav-colored{
+        background: black !important;
+    }
+    .nav-transparent{
+        box-shadow: none;
+        background-color: transparent !important;
+    }
+    
+    section{
+    	padding: 120px 0;
+    }
+
+
+    .j-px-sm{
+    	padding: 0 var(--px-sm);
+    }
+   	*{
+    font-family:'Montserrat';
+	}
+
+	:root {
+	--px-sm :54px;
+    --j-color-primary : #3D9746;
+    --j-color-secondary : #EEFFEE;
+    --color-primary: #222;
+    --color-primary-rgb: 34, 34, 34;
+    --color-link: #222;
+    --color-white: #fff;
+    --color-white-rgb: 255, 255, 255;
+    --color-orange: #FA5D29;
+    --color-errors: #FA5D29;
+    --color-featured: #f8f0ee;
+    --color-underlined: var(--color-primary-rgb);
+    --color-connect: #FF602C;
+    --color-connect-2: #FFAE94;
+    --color-connect-3: #FFC5B1;
+    --color-inspire: #AAEEC4;
+    --color-inspire-2: #C8E4D3;
+    --color-inspire-3: #E2F4E9;
+    --color-awards: #502bd8;
+    --color-awards-2: #6749d1;
+    --color-awards-3: #917eda;
+    --color-read: #c0ab3c;
+    --color-read-2: #CDC38B;
+    --color-read-3: #DBD6C0;
+    --color-learn: #FFF083;
+    --color-learn-2: #FFF9D0;
+    --color-learn-3: #fffbe2;
+    --color-jobs: #74bcff;
+    --color-jobs-2: #99ccfc;
+    --color-jobs-3: #b4d7f8;
+    --text-size-small: 12px;
+    --text-size-primary: 16px;
+    --text-size-medium: 18px;
+    --text-size-large: 24px;
+    --border-gray: #e9e9e9;
+    --bg-primary: #F8F8F8;
+    --bg-primary-rgb: 248, 248, 248;
+    --bg-secondary: #222;
+    --bg-3rd: #e9e9e9;
+    --bg-4rd: #f3f3f3;
+    --bg-white: white;
+    --header-height: 71px;
+    --gutter: 20px;
+    --pad-inner: 52px;
+    --color-odd-rows: #f3f3f3;
+    --avatar-bg: #F8F8F8;
+    --rounded-small: 4px;
+    --rounded-normal: 8px;
+    --rounded-large: 1rem;
+    --img-resizing-site: 16 / 12;
+    --img-resizing-paronamic: 2 / 1;
+    --img-resizing-desktop: 19 / 10;
+</style>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+    <!--Template functions-->
+<script src="js/functions.js"></script>
+<script>
+    var media = window.matchMedia("(max-width: 570px)")
+    var media2 = window.matchMedia("(max-width: 768px)")
+    // if(media.matches){
+    //     function searchClicked(){
+    //         var searchForm = document.getElementById("searchForm")
+    //         if (!searchForm.classList.contains("absolute")) {
+    //             searchForm.classList.add("absolute")
+    //         }else{
+    //             searchForm.classList.remove("absolute")
+    //         }
+    //     }
+    // }else{
+    //     console.log("kiasjdi")
+    // }
+	function clicks() {}
+    	function dropToggle() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        function dropLanguage() {
+          document.getElementById("language").classList.toggle("show");
+        }
+        const classes = ["bg-overlay-show","header-result-show","bg-overlay-show"];
+
+        function searchClicked() {
+        var show = document.getElementById("headerResult");
+        var background = document.getElementById("headerBlack");
+        var carousel = document.querySelector(".carousel")
+
+            if (carousel.style.visibility === "visible" && carousel.style.opacity === "1") {
+                carousel.style.visibility = "hidden";
+                carousel.style.opacity = "0";
+            } else {
+                carousel.style.visibility = "visible";
+                carousel.style.opacity = "1";
+            }
+            // carousel.style.opacity = carousel.style.opacity === "0" ? "1" : "0";
+            document.getElementById("searchForm").classList.toggle("absolute-sm")
+        	show.classList.toggle("header-result-show");
+        	background.classList.toggle("bg-overlay-show");
+
+        }
+
+        // var headBlack = document.getElementById("headerBlack");
+        // headBlack.addEventListener("click", displayDate);
+        // function displayDate(){
+        //     var show = document.getElementById("headerResult");
+        //     var background = document.getElementById("headerBlack");
+        //     show.classList.toggle("header-result-show");
+        //     background.classList.toggle("bg-overlay-show")
+        // }
+
+        window.onclick = function(event){
+            if(!event.target.matches('.dropdown-toggle') 
+                && !event.target.matches('.dropspan') 
+                && !event.target.matches('.search-form-input')){
+                var dropdowns = document.getElementById("myDropdown");
+                    if(dropdowns.classList.contains('show')){
+                        dropdowns.classList.remove('show');
+                    }
+                for (var i=0; i<dropdowns.length; i++){
+                    var openDropdown = dropdowns[i];
+                    console.log(dropdowns[i]);
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.list.classList.remove('show');
+                    }
+                }
+            }
+            if (event.target.matches('.bg-overlay')) {
+                var bgDark = document.getElementById('headerBlack');
+                var showRes = document.getElementById('headerResult');
+                var carousel = document.querySelector(".carousel")
+
+                if (carousel.style.visibility === "visible" && carousel.style.opacity === "1") {
+                    carousel.style.visibility = "hidden";
+                    carousel.style.opacity = "0";
+                } else {
+                    carousel.style.visibility = "visible";
+                    carousel.style.opacity = "1";
+                }
+
+                if(bgDark.classList.contains("bg-overlay-show") && showRes.classList.contains("header-result-show")){
+                    bgDark.classList.remove("bg-overlay-show")
+                    showRes.classList.remove("header-result-show")
+                    document.getElementById("searchForm").classList.toggle("absolute-sm")
+                }
+            }
+        }
+</script>
