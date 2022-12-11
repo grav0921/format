@@ -452,13 +452,13 @@ Topbar
 
 #header .header-inner #logo a > img, #header #header-wrap #logo a > img { vertical-align: inherit; -webkit-transition: all .4s ease-in-out; transition: all .4s ease-in-out; height: 80px; width: auto; }
 
-#header .header-inner #logo a > img, #header .header-inner #logo a [class*="logo-"], #header #header-wrap #logo a > img, #header #header-wrap #logo a [class*="logo-"] { display: block; }
+#header .header-inner #logo a > img, #header .header-inner #logo a [class*="logo-"], #header #header-wrap #logo a > img, #header #header-wrap #logo a [class*="logo-"] { display: none; }
 
 #header .header-inner #logo a .logo-default, #header #header-wrap #logo a .logo-default { display: block; }
 
 #header .header-inner #logo a, #header .header-inner #logo a span, #header #header-wrap #logo a, #header #header-wrap #logo a span { font-family: inherit; font-size: 40px; color: #1e2022; font-weight: 800; letter-spacing: 1.5px; }
 
-#header[data-fullwidth="true"] .header-inner .container, #header[data-fullwidth="true"] #header-wrap .container { max-width: 100%; padding: 0 30px; }
+#header[data-fullwidth="true"] .header-inner .container, #header[data-fullwidth="true"] #header-wrap .container { max-width: 100%; padding: 0 52px; }
 
 #header.header-modern:not(.header-active) { margin: 40px auto 0; width: 1200px; }
 
