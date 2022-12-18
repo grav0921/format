@@ -1,0 +1,12 @@
+style.css 
+.heading-text h4 {
+font-size: 42px 
+line-height : 50px
+}
+
+custom.css
+.d-block{
+    display: block
+}
+
+grid{ none }
